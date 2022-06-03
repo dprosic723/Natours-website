@@ -78,6 +78,7 @@ body{
     border-radius: 1000px;
     transition: all 250ms ease;
     font-weight: 700;
+
 }
 .btn:hover{
     transform: translateY(-3px);
@@ -99,6 +100,10 @@ body{
     border-radius: 1000px;
     z-index: -1;
     transition: all 0.4s;
+}
+.btn-animated{
+    animation: fadeInBottom 0.8s ease 0.7s;
+    animation-fill-mode: backwards;
 }
 
 .btn:hover::after{
@@ -126,6 +131,19 @@ body{
     }
     70%{
         transform: translateX(-5%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    70%{
+        transform: translateY(-5%);
     }
     100%{
         opacity: 1;
