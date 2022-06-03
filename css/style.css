@@ -12,19 +12,25 @@ Dark green: #28b485
     --primary-color-800: #28b485;
 }
 
-
-*{
+*,
+*::before,
+*::after{
     margin:0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
 }
 
 body{
     font-family: "Lato", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header{
@@ -39,11 +45,11 @@ body{
 
 .logo-container {
    position: relative;
-   top:40px;
-   left:40px;
+   top:4rem;
+   left:4rem;
 }
 .logo{
-    height: 30px;
+    height: 3rem;
 }
 
 .text-container{
@@ -55,18 +61,18 @@ body{
 }
 .title-main{
     display: block;
-    letter-spacing: 35px;
-    font-size: 60px;
+    letter-spacing: 3.5rem;
+    font-size: 6rem;
     font-weight: 400;
     animation: fadeInLeft 0.8s ease-out;
 }
 .title-sub{
     display: block;
-    letter-spacing: 17.4px;
-    font-size: 20px;
+    letter-spacing: 1.74rem;
+    font-size: 2rem;
     font-weight: 700;
     animation: fadeInRight 0.8s ease-out;
-    margin-bottom:60px;
+    margin-bottom:6rem;
 }
 .btn{
     position: relative;
@@ -74,7 +80,7 @@ body{
     color: var(--primary-color-800);
     text-decoration: none;
     background-color: #fff;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     border-radius: 1000px;
     transition: all 250ms ease;
     font-weight: 700;
@@ -82,11 +88,11 @@ body{
 }
 .btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
 }
 .btn:active{
     transform: translateY(0);
-    box-shadow: 0 13px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1.3rem 1rem rgba(0, 0, 0, 0.3);
 }
 .btn::after{
     content:"";
