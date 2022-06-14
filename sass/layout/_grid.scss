@@ -1,5 +1,5 @@
 .row{
-    max-width: 144rem;
+    max-width: $grid-width;
     margin: 0 auto;
 
     &:not(:last-child){
@@ -9,7 +9,6 @@
     @include clearfix;
 
     .column{
-        background-color: rebeccapurple;
         float: left; 
         &:not(:last-child){
             margin-right: $grid-gap-inline;

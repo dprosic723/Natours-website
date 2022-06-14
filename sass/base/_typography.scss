@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   line-height: 1.7;
   color: $color-grey;
 }
@@ -15,10 +15,20 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   transition: all .2s;
-
+  text-align: center;
+ 
   &:hover{
     transform: skew(10deg, 2deg) scale(1.1);
    text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
   }
+}
 
+.heading-tertiary{
+  text-transform: uppercase;
+}
+
+.paragraph{
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
 }
