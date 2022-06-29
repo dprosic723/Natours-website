@@ -1,0 +1,123 @@
+.book {
+  background-image: linear-gradient(
+      109deg,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../../img/nat-10.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 5rem;
+  @include respond(tab-port)
+  {
+    background-image: linear-gradient(
+      109deg,
+      rgba($color-white, 0.9) 70%,
+      transparent 70%
+    ),
+    url(../../img/nat-10.jpg);
+  }
+  @include respond(phone){
+    background-image: linear-gradient(rgba($color-white, 0.9), rgba($color-white, 0.9)), url(../../img/nat-10.jpg);
+  }
+
+  
+}
+
+.form {
+  &__group {
+    position: relative;
+    &-radio {
+      display: inline-block;
+      padding: 3rem .8rem;
+    }
+  }
+
+  &__input {
+    position: relative;
+    margin-block: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+    font-family: inherit;
+    border: none;
+    width: 40%;
+    border-bottom: 3px solid transparent;
+
+    &-label {
+      position: absolute;
+      left: 1.9rem;
+      top: 6.5rem;
+      opacity: 1;
+      transition: all 350ms;
+    }
+
+    &:placeholder-shown ~ &-label {
+      transform: translateY(-3.6rem);
+      opacity: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:valid {
+      border-bottom: 3px solid $color-primary-300;
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-800;
+    }
+    @include respond(tab-port)
+    {
+      width: 65%;
+    }
+
+    @include respond(phone){
+      width: 90%;
+      box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    }
+
+  }
+
+  &__radio {
+    visibility: hidden;
+
+    &-label {
+      position: relative;
+      font-family: inherit;
+      font-size: 1.7rem;
+      padding-left: 3rem;
+      cursor:pointer;
+
+      &::before {
+        outline: 3px solid $color-primary-300;
+        outline-offset: 3px;
+        content: "";
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.6rem;
+        left: 1rem;
+      }
+    }
+
+    &:checked + &-label::before{
+        background-color: $color-primary-300; 
+    }
+
+  }
+
+  &__btn{
+      font-size: 1.7rem;
+      border:none;
+      display: block;
+      margin-top: 2.5rem;
+  }
+  @include respond(phone){
+    text-align: center;
+  }
+
+}
+
+input:-internal-autofill-selected {
+  background-color: $color-white;
+}

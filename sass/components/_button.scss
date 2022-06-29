@@ -54,19 +54,19 @@
     }
 }
 
-.learn-more{
+.btn-text{
     color: $color-primary-300;
-    font-size: $font-size-default;
+    font-size: 1.8rem;
     font-weight: 500;
     text-decoration: none; 
     transition: all 350ms;
     border-bottom: 1px solid $color-primary-300;
     padding:3px;
+    position:relative;
 
     &:hover{
-        transform: translateY(-3px);
+        transform: scale(1.2);
         color:white;
         background-color: $color-primary-300;
-    
     }
 }

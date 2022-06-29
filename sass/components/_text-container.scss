@@ -11,6 +11,9 @@
         font-size: 6rem;
         font-weight: 400;
         animation: fadeInLeft 0.8s ease-out;
+        @include respond(phone){
+            letter-spacing: 2rem;
+        }
     }
     &__title-sub{
         display: block;
@@ -19,5 +22,9 @@
         font-weight: 700;
         animation: fadeInRight 0.8s ease-out;
         margin-bottom:6rem;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+        }
     } 
 }

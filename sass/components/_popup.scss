@@ -1,0 +1,71 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba($color-black, $alpha: 0.5);
+  transition: all 500ms;
+
+  visibility: hidden;
+  opacity: 0;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%) scale(0.3);
+    background-color: $color-white;
+    display: table;
+    column-gap: 2rem;
+    transition: all 400ms;
+    &-left {
+      display: table-cell;
+      vertical-align: middle;
+      width: 33.33333%;
+    }
+    &-right {
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 2rem 3rem;
+      width: 66.666667%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__text {
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid rgba($color-grey, 0.3);
+    hyphens: auto;
+    margin-block: 3rem;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      top: .5rem;
+      right: 2.5rem;
+      font-size: 3.6rem;
+      text-decoration: none;
+      color: $color-grey-dark;
+    }
+  }
+
+  &:target{
+    visibility: visible;
+    opacity: 1;
+  }
+  &:target &__content{
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+}

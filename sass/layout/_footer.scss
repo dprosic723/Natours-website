@@ -1,0 +1,56 @@
+.footer{
+    background-color: $color-grey-dark;
+    padding: 9rem 6rem;
+    color: $background-color;
+    &__logo{
+        &-box
+       {
+           margin:auto;
+           width: 15rem;
+           text-align: center;
+        }
+        &-image{
+            width:100%;
+            object-fit: cover;
+        } 
+    }
+    &__links{
+        &-list{ 
+            text-align: center;
+            margin-right: 7rem;
+            display:flex;
+            justify-content: space-between;
+            list-style-type: none;
+            font-size: 1.4rem;
+            padding-block: 1.5rem;
+            border-top: 2px solid $background-color;
+            @include respond(tab-port){
+                margin: 0 auto;
+            }
+        }
+        &-item:not(:last-child){
+            margin-right: 1.5rem;
+        }
+        &-link{
+            color:inherit;
+            text-decoration: none;
+            padding: .3rem .2rem;
+            transition: all 350ms;
+        }
+        &-link:hover{
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: $shadow-light;
+            color: $color-primary-300;
+        }
+
+    }
+    &__credits{
+        font-size: 1.4rem;
+        margin-left: 7rem;
+        padding-block: 1.5rem;
+        border-top: 2px solid $background-color;
+        @include respond(tab-port){
+            margin: 0 auto;
+        }
+    }
+}  

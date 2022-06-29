@@ -25,6 +25,12 @@
             &-3{
                 background-image: linear-gradient(to right bottom, $color-ternary-100, $color-ternary-800);
             }
+        @media (hover:none){
+            &--back{
+                transform: rotateY(0);
+                top: 30rem;
+            }
+        }
         }
 
         
@@ -82,6 +88,10 @@
         &-3{
             background-image: linear-gradient(to right bottom,  rgba($color-ternary-100, 0.8),  rgba($color-ternary-800, 0.8));
         }
+        @include respond(phone){
+            top: 15%;
+            left: 1rem;
+        }
     }
     &__side ul{
         list-style: none;
@@ -118,6 +128,11 @@
                 margin-bottom: 3rem;
         }
 
+    }
+
+    @include respond(tab-port){
+        width: 50%;
+        margin: 3rem auto;
     }
 
 }

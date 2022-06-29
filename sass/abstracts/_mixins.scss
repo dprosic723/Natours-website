@@ -5,3 +5,36 @@
     clear: both;
     }
 }
+
+//MEDIA QUERY MANAGER
+// 0-600px : phone
+// 600-900px : tab-port
+// 900-1200 : tab-land
+// 1200-1800 : default
+// 1800 and bigger: big-desktop
+
+@mixin respond($device){
+    @if $device == small-phone{
+        @media (max-width: 25em){@content} // 400px = 25em;
+    };
+
+    @if $device == phone
+    {
+        @media (max-width: 37.5em){@content}  // 16px = 1em => 600px = 37.5em
+    };
+
+    @if $device == tab-port
+    {
+        @media (max-width: 62.25em) {@content}  // 900px = 65.25em
+    };
+
+    @if $device == tab-land
+    {
+        @media (max-width:  75em){@content}  // 1200px = 75em
+    };
+    @if $device == big-desktop
+    {
+        @media (min-width: 112.5em){@content}  // 1800px = 112.5em
+    };
+
+}

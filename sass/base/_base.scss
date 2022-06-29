@@ -6,11 +6,36 @@
     box-sizing: inherit;
 }
 html{
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px
+    overflow-x: hidden;
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(phone){
+        font-size: 45%;
+    }
+    @include respond(small-phone)
+    {
+        font-size: 40%;
+    }
+    
+    
+    @include respond(big-desktop){
+        font-size: 75%;
+    }
 }
 
 body{
-    padding: 3rem;
+    margin:auto;
+    padding:3rem;
     box-sizing: border-box;
     backface-visibility: hidden;
+    overflow-x: hidden;
+    @include respond(phone) 
+    {
+        padding: 0;
+    }
 }
