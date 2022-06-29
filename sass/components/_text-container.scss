@@ -5,6 +5,10 @@
     top:40%;
     transform: translate(-50%, -50%);
 
+    @include respond(phone){
+        top: 50%;
+    }
+
     &__title-main{
         display: block;
         letter-spacing: 3.5rem;
