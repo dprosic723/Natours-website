@@ -6,6 +6,7 @@
   box-sizing: inherit; }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   overflow-x: hidden; }
   @media (max-width: 75em) {
@@ -111,7 +112,8 @@ section {
 
 .about-section {
   margin-top: -30vh;
-  padding: 30rem 3rem 25rem; }
+  padding: 30rem 3rem 25rem;
+  scroll-margin-top: -10rem; }
   @media (max-width: 62.25em) {
     .about-section {
       padding-bottom: 50rem; } }
@@ -119,6 +121,9 @@ section {
     .about-section {
       padding-top: 45rem;
       padding-bottom: 40rem; } }
+  @media (min-width: 112.5em) {
+    .about-section {
+      padding: 40rem 1rem 35rem; } }
 
 .features-section {
   padding: 12rem 3rem;
@@ -129,13 +134,17 @@ section {
   margin-top: -10rem; }
   .features-section > * {
     transform: skewY(9deg); }
+  @media (min-width: 112.5em) {
+    .features-section {
+      padding: 20rem 2rem; } }
 
-.tools-section {
+.tours-section {
   margin-top: -10rem;
-  padding: 25rem 3rem;
-  text-align: center; }
+  padding: 25rem 3rem 16rem;
+  text-align: center;
+  scroll-margin-top: -22rem; }
   @media (max-width: 62.25em) {
-    .tools-section {
+    .tours-section {
       padding: 20rem 3rem 15rem; } }
 
 .testimonials-section {
@@ -192,9 +201,9 @@ section {
     left: 4rem; }
   .header__logo {
     height: 3rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 62.25em) {
     .header {
-      height: 45vh;
+      height: 70vh;
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); } }
 
 .footer {
@@ -326,7 +335,7 @@ section {
       background-position: 100%;
       transform: translateX(2rem); }
   .navigation__checkbox:checked ~ .navigation__background {
-    transform: scale(50); }
+    transform: scale(70); }
   .navigation__checkbox:checked ~ .navigation__menu-box {
     opacity: 1;
     transform: translateX(0); }
@@ -443,8 +452,8 @@ section {
       left: 0; }
       @media (max-width: 62.25em) {
         .composition__photo--photo1 {
-          top: 3rem;
-          left: 7rem; } }
+          top: 4rem;
+          left: -0.6rem; } }
       @media (max-width: 37.5em) {
         .composition__photo--photo1 {
           top: 4rem;
@@ -454,8 +463,8 @@ section {
       top: 3rem; }
       @media (max-width: 62.25em) {
         .composition__photo--photo2 {
-          top: 3rem;
-          right: 7rem; } }
+          top: 4rem;
+          right: -0.6rem; } }
       @media (max-width: 37.5em) {
         .composition__photo--photo2 {
           top: 4rem;
